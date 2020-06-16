@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+body {
+	overflow: hidden;
+}
+
+#container {
+	font-family: 'Montserrat', sans-serif;
+	position: absolute;
+	right: 1%;
+	top: 3%;
+	transform: skew(0.5turn, -2.5deg);
+}
+
+.notify {
+	width: 20vw;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.25),rgba(250, 250, 250, 0.0));
+	border-top-right-radius: 1.5vw;
+	border-bottom-right-radius: 1.5vw;
+	margin-bottom: 1vw;
+	overflow: hidden;
+
+  	animation-name: slideInRight;
+  	animation-duration: 0.5s;
+  	animation-fill-mode: both;
+}
+
+.icon {
+	margin-left: 1vw;
+	margin-top: 1vw;
+	width: 2vw;
+	opacity: 0.65;
+
+	animation-delay: 0.25s;
+	animation-name: animateIcon;
+	animation-duration: 1s;
+  	animation-fill-mode: both;
+}
+
+.notify-type {
+	color: rgba(211, 211, 211, 0.65);
+	font-weight: 500;
+	font-size: 1.2vw;
+	margin-top: -2vw;
+	margin-left: 4vw;
+}
+
+.notify-time {
+	color: rgba(211, 211, 211, 0.3);
+	font-weight: 500;
+	font-size: 1vw;
+	margin-top: -1.35vw;
+	margin-left: 17vw;
+	animation-delay: 0.5s;
+	animation-name: slideInRight;
+  	animation-duration: 0.5s;
+  	animation-fill-mode: both;
+}
+
+.notify-text {
+	color: rgba(211, 211, 211, 0.75);
+	padding-top: 7.5%;
+	padding-left: 5%;
+	padding-bottom: 5%;
+	font-weight: 500;
+	font-size: 1vw;
+
+  	animation-name: slideInLeft;
+  	animation-duration: 0.75s;
+  	animation-fill-mode: both;
+}
+
+@keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes animateIcon {
+	0% {
+		transform: rotate(0deg);
+	}25% {
+		transform: rotate(-15deg);
+	}50% {
+		transform: rotate(15deg);
+	}100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes slideInLeft {
+	0% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		visibility: visible;
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
